@@ -1,0 +1,17 @@
+{
+  "name": "testnav",
+  "displayName": "testnav",
+  "expo": {
+    "name": "testnav",
+    "slug": "testnav",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
