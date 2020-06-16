@@ -12,7 +12,7 @@ class TestScreen extends React.Component {
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        <Text>{this.props.title || 'Title'}</Text>
+        <Text>{this.props.route.params.title || 'Title'}</Text>
       </View>
     )
   }

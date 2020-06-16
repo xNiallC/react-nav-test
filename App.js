@@ -11,10 +11,53 @@ const instructions = Platform.select({
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer linking={LinkConfig}>
       <AppContainer />
     </NavigationContainer>
   );
+}
+
+const LinkConfig = {
+  config: {
+    MainStack: {
+      path: 'main',
+      screens: {
+        RandomPages: {
+          path: 'RandomPages',
+          path: 'others',
+          screens: {
+            Profile: 'profile',
+            Admin: 'admin'
+          }
+        },
+        Drawers: {
+          path: 'drawers',
+          screens: {
+            Tabs: {
+              path: 'tabs',
+              screens: {
+                Challenges: {
+                  path: 'challenges',
+                  screens: {
+                    Challenge: 'challenge',
+                    ChallengesList: 'list'
+                  }
+                },
+                Ideas: 'ideas'
+              }
+            },
+            Random: {
+              path: 'random',
+              screens: {
+                Profile: 'profile',
+                Admin: 'admin'
+              }
+            }
+          }
+        },
+      }
+    }
+  }
 }
 
 const styles = StyleSheet.create({
